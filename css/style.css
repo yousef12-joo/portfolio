@@ -20,8 +20,10 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
-
-header {
+.navbar-expand-lg .navbar-collapse {
+  justify-content: right;
+}
+nav{
   position: fixed;
   width: 100%;
   right: 0;
@@ -33,38 +35,18 @@ header {
   padding: 20px 100px;
   background: var(--bg-color);
   box-shadow: rgba(33, 35, 38, 0.13) 0px 5px 5px 0px;
-
 }
-
-.logo {
-  font-size: 2.2em;
+.bg-body-tertiary {
+  --bs-bg-opacity: 0;
+  
+}
+.navbar-brand1 {
+  font-size: 1.6em;
   font-weight: 600;
   color: var(--main-color);
-  animation: lon 3s ease-in-out infinite;
-}
-@keyframes lon{
-  0%{
-    color: var(--main-color);
-  }
-  50%{
-    color: var(--text-color);
-  }
-  100%{
-    color: var(--main-color);
-  }
-
-}
-
-.navlist {
-  display: flex;
   text-decoration: none;
 }
-
-ul {
-  list-style-type: none;
-}
-
-.navlist a {
+.navbar-nav a{
   color: var(--text-color);
   font-size: 1rem;
   font-weight: 500;
@@ -72,24 +54,16 @@ ul {
   padding-left: 15px;
   transition: color .4s ease;
 }
-
-.navlist a:hover {
+.navbar-nav a:hover {
   color: var(--main-color);
 }
 
-#menu-icon {
-  font-size: 2rem;
-  cursor: pointer;
-  display: none;
-}
-
 section {
-  padding: 75px 16.7%;
+  padding: 60px 11%;
   margin-top: 50px;
 }
 
 .home {
-
   width: 100%;
   min-height: 95vh;
   display: grid;
@@ -105,7 +79,7 @@ section {
   border-radius: 20px;
 }
 .home-imag{
-  animation: pulse 10s ease-in-out infinite;
+  animation: pulse 5s ease-in-out infinite;
 }
 
 .home-text h5 {
@@ -113,8 +87,7 @@ section {
   font-weight: 500;
   margin-bottom: 15px;
   color: var(--main-color);
-  opacity: 0; /* Initially hidden */
-  animation: fadeIn 1s ease forwards;
+
 }
 
 .home-text h1 {
@@ -123,7 +96,7 @@ section {
   line-height: 1.4;
   margin-bottom: 25px;
   opacity: 0; /* Initially hidden */
-  animation: fadeIn 1s ease forwards;
+  animation: fadeIn 4s ease infinite;
 }
 
 .home-text p {
@@ -132,8 +105,7 @@ section {
   color: #717173;
   line-height: 1.8;
   margin-bottom: 20px;
-  opacity: 0; /* Initially hidden */
-  animation: fadeIn 1s ease forwards;
+  
 }
 @keyframes fadeIn {
   from {
@@ -170,7 +142,7 @@ section {
   padding-top: 100px;
 }
 .about-imag{
-  animation: pulse 10s ease-in-out infinite;
+  animation: pulse 5s ease-in-out infinite;
 }
 @keyframes pulse{
   0% {
@@ -400,6 +372,7 @@ margin-bottom: 10px;
   padding: 12px 39px;
   border-radius:30px;
   transition: 0.4s ease;
+  text-decoration: none;
 }
 .cta-btn:hover{
   transform: scale(1.1);
@@ -494,30 +467,6 @@ margin-bottom: 10px;
   section{
     padding: 50px 5%;
   }
-}
-@media (max-width:1060px){
-  #menu-icon{
-    display:block;
-  }
-  header .navlist{
-    position: absolute;
-    top: -400px;
-    right: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background: white;
-    transition: 0.4s ease;
-  }
-  header .navlist .active{
-    top:6px;
-  }
-  .navlist a{
-    display: block;
-    padding: 1.6rem;
-  }
- 
 }
 @media (max-width:950px){
   .home{
